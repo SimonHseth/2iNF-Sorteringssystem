@@ -1,9 +1,12 @@
 export type Equipment = {
+  status: string;
+  id: number;
+  Spesifikasjoner: string;
+  Beskrivelse: string;
   Produsent: string;
-  beskrivelse: string;
-  spesifikasjoner: string;
-  innkjøpsdato: string;
-  innkjøpspris: number;
+  Innkjøpsdato: string;
+  Innkjøpspris: number;
   Forventet_levetid: number;
   Kategori: string;
+  borrower?: string;
 };

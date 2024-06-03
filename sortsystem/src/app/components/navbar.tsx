@@ -4,24 +4,29 @@ import Image from "next/image";
 export default function Navbar () {
     return(
         <div className="w-full h-28 m-auto grid  ">
-            <div className=" w-full h-10 bg-[#005850]">
-             <div className="text-white flex text-left" >
+            <div className=" w-full h-8 bg-[#005850] ">
+             <div className="text-white flex text-left ml-2" >
                 <Link href="https://innlandet.sharepoint.com/sites/INNsia-Eleverivideregendeskole">INNsia - elever i vgs</Link>
                 
              </div>
             </div>
-            <div className="w-full h-20 outline">
-                <div className="w-12 h-12 bg-red-800 justify-center ml-20 mt-4">
+            
+            <div className="w-full h-20 outline outline-green-500 flex text-black">
+                
+                <div className="w-fit h-fit justify-center ml-10 mt-3">
                     <img
-                        src="../innlandet-fylkeskommune.svg"
-                        width={100}
-                        height={100}
+                        src="/logo.svg"
+                        width={200}
+                        height={200}
 
                     />
                 
                 </div>
+                <Link href="/login" className="text-black mt-6 ml-10">Logg inn</Link>
+                
 
             </div>
+            
 
             
             

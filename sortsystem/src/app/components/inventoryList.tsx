@@ -7,11 +7,13 @@ const EquipmentList: React.FC = () => {
   const [equipment, setEquipment] = useState<Equipment[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [borrower, setBorrower] = useState<string>('');
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('../equipment.json');
+        const response = await fetch('/equipment.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -30,6 +32,19 @@ const EquipmentList: React.FC = () => {
 
     fetchData();
   }, []);
+  
+
+  const handleBorrow = (id: number) => {
+    if (!borrower) {
+      alert('Please enter your name');
+      return;
+    }
+    setEquipment((prevEquipment) =>
+      prevEquipment.map((item) =>
+        item.id === id ? { ...item, borrower, status: 'Lånt ut' } : item
+      )
+    );
+  };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -40,10 +55,11 @@ const EquipmentList: React.FC = () => {
       <ul>
         {equipment.map((item) => (
           <li key={item.Produsent} className="bg-white shadow-md rounded p-4 mb-4">
-            <p><strong>Navn:</strong> {item.beskrivelse}</p>
-            <p><strong>Beskrivelse:</strong> {item.spesifikasjoner}</p>
-            <p><strong>spesifikasjoner:</strong> {item.innkjøpsdato}</p>
-            <p><strong>innkjøpspris:</strong> {item.innkjøpspris}</p>
+            <p><strong>Produsent:</strong> {item.Produsent}</p>
+            <p><strong>Beskrivelse:</strong> {item.Beskrivelse}</p>
+            <p><strong>Spesifikasjoner:</strong> {item.Spesifikasjoner}</p>
+            <p><strong>Innkjøpsdato:</strong> {item.Innkjøpsdato}</p>
+            <p><strong>Innkjøpspris:</strong> {item.Innkjøpspris}</p>
             <p><strong>Kategori:</strong> {item.Kategori}</p>
           </li>
         ))}
@@ -51,6 +67,6 @@ const EquipmentList: React.FC = () => {
     </div>
   );
 };
-console.log(EquipmentList)
 
+console.log(EquipmentList)
 export default EquipmentList;
