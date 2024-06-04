@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
 export default function Navbar () {
     return(
@@ -13,7 +14,7 @@ export default function Navbar () {
             
             <div className="w-full h-20 outline outline-green-500 flex text-black">
                 
-                <div className="w-fit h-fit justify-center ml-10 mt-3">
+                <div className="w-fit h-fit justify-center ml-10 mt-1">
                     <img
                         src="/logo.svg"
                         width={200}
@@ -22,7 +23,7 @@ export default function Navbar () {
                     />
                 
                 </div>
-                <Link href="/login" className="text-black mt-6 ml-10">Logg inn</Link>
+                <Link href="../login" className="text-black mt-6 ml-10">Logg inn</Link>
                 
 
             </div>

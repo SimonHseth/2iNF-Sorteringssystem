@@ -1,5 +1,4 @@
 import React from "react";
-import EquipmentList from "./components/inventoryList";
 
 const Utlan = () => {
     return(
