@@ -88,7 +88,7 @@ const EquipmentList: React.FC = () => {
             <p><strong>Pris:</strong> {item.Innkjøpspris}</p>
             <p><strong>Alder:</strong> {item.Innkjøpsdato} år</p>
             <p><strong>Kategori:</strong> {item.Kategori}</p>
-            <p><strong>Produsent:</strong> {item.Forventet_levetid}</p>
+            
             {item.status === 'Available' ? (
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded"
