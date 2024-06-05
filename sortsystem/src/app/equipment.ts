@@ -1,12 +1,11 @@
-export type Equipment = {
-  status: string;
+export interface Equipment {
   id: number;
-  Spesifikasjoner: string;
-  Beskrivelse: string;
   Produsent: string;
-  Innkjøpsdato: string;
+  Beskrivelse: string;
+  Spesifikasjoner: string;
+  status: string;
+  borrower: string;
   Innkjøpspris: number;
-  Forventet_levetid: number;
+  Innkjøpsdato: number;
   Kategori: string;
-  borrower?: string;
-};
+}

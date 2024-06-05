@@ -5,9 +5,10 @@ import React from "react";
 export default function Navbar () {
     return(
         <div className="w-full h-28 m-auto grid  ">
-            <div className=" w-full h-8 bg-[#005850] ">
+            <div className=" w-full h-8 bg-[#005850]">
              <div className="text-white flex text-left ml-2" >
                 <Link href="https://innlandet.sharepoint.com/sites/INNsia-Eleverivideregendeskole">INNsia - elever i vgs</Link>
+                
                 
              </div>
             </div>
@@ -15,6 +16,7 @@ export default function Navbar () {
             <div className="w-full h-20 outline outline-green-500 flex text-black">
                 
                 <div className="w-fit h-fit justify-center ml-10 mt-1">
+                    <Link href="./page.tsx" />
                     <img
                         src="/logo.svg"
                         width={200}

@@ -6,7 +6,8 @@
         "Innkj\u00f8psdato": "15.08.2023",
         "Innkj\u00f8pspris": 999.99,
         "Forventet levetid (i \u00e5r)": 5,
-        "Kategori": "Datamaskiner"
+        "Kategori": "Datamaskiner",
+        "Id": "00001"
     },
     {
         "Produsent": "Dell",
@@ -15,7 +16,8 @@
         "Innkj\u00f8psdato": "12.06.2023",
         "Innkj\u00f8pspris": 1500.0,
         "Forventet levetid (i \u00e5r)": 4,
-        "Kategori": "B\u00e6rbare Datamaskiner"
+        "Kategori": "B\u00e6rbare Datamaskiner",
+        "Id": "00002"
     },
     {
         "Produsent": "Lenovo",
